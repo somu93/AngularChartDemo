@@ -25,10 +25,6 @@ const routes: Routes = [
 
 ];
 
-// const routes: Routes = [
-//   {path: '', component:  ChartComponent, children: childRoutes}
-// ];
-
 @NgModule({
   declarations: [],
   imports: [
