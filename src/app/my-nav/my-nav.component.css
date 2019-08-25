@@ -22,3 +22,11 @@
 mat-nav-list a {
    margin-top: 0 !important;
 }
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-icon {
+  cursor: pointer;
+
+}
