@@ -1,0 +1,23 @@
+.active-link {
+  background-color: #86c7f3;
+  color: white;
+}
+
+.main-content {
+  margin-top: 50px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.middle-align {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.nav-tabs {
+justify-content: center;
+}

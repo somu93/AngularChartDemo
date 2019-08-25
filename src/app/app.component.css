@@ -1,0 +1,11 @@
+.myroutes {
+  background-color: black;
+  color: white;
+  width: 142px;
+  padding: 5px;
+
+}
+
+.router-link-active {
+  border:1px solid red;
+}
