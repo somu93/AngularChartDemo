@@ -5,19 +5,15 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyNavComponent } from './my-nav/my-nav.component';
-import { ChartModule } from './feature/chart/chart.module';
-import { DefaultChildComponent } from './feature/default-child/default-child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DefaultChildComponent,
     MyNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartModule,      // feature Module For Showing chart
     MaterialModule,
     BrowserAnimationsModule
   ],

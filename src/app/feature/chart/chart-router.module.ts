@@ -9,33 +9,37 @@ import { MyPieChartComponent } from './my-pie-chart/my-pie-chart.component';
 import { ChartComponent } from './chart.component';
 
 /**
+ * This is child Routes
+ */
+
+const childRoutes: Routes = [
+  { path: 'bar-chart', component: MyBarChartComponent },
+  { path: 'doughnut-chart', component: MyDoughnutChartComponent },
+  { path: 'radar-chart', component: MyRadarChartComponent },
+  { path: 'pie-chart', component: MyPieChartComponent },
+  { path: 'line-chart', component: MyLineChartComponent },
+  { path: '', redirectTo: 'bar-chart', pathMatch: 'full' },
+  { path: '**', redirectTo: 'bar-chart', pathMatch: 'full' }
+];
+
+/**
  * This is Main Routes For Chart
  */
 const routes: Routes = [
-  {path: '', component:  ChartComponent, children:
-    [
-      {path: 'bar-chart', component: MyBarChartComponent},
-      {path: 'doughnut-chart', component: MyDoughnutChartComponent},
-      {path: 'radar-chart', component: MyRadarChartComponent},
-      {path: 'pie-chart', component: MyPieChartComponent},
-      {path: 'line-chart', component: MyLineChartComponent},
-      {path: '', redirectTo: 'bar-chart', pathMatch: 'full'},
-      {path: '**', redirectTo: 'bar-chart', pathMatch: 'full'}
-    ]}
-
+  { path: '', component: ChartComponent, children: childRoutes }
 ];
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes)
-  ],
-  exports : [
-    RouterModule
-  ]
+  imports: [CommonModule, RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class ChartRouterModule {
-  static comps = [MyDoughnutChartComponent, MyRadarChartComponent, MyPieChartComponent, MyLineChartComponent, MyBarChartComponent];
-
+  static comps = [
+    MyDoughnutChartComponent,
+    MyRadarChartComponent,
+    MyPieChartComponent,
+    MyLineChartComponent,
+    MyBarChartComponent
+  ];
 }

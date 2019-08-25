@@ -15,3 +15,10 @@
   top: 0;
   z-index: 1;
 }
+.active-route {
+  background-color: #673ab7 !important;
+  color: white !important;
+}
+mat-nav-list a {
+   margin-top: 0 !important;
+}

@@ -1,0 +1,13 @@
+table {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 30px;
+}
+
+.make-danger {
+  background-color: blueviolet;
+  color:white;
+  font-weight: bold;
+}

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DefaultChildComponent } from './feature/default-child/default-child.component';
+import { DeviceStatusComponent } from './feature/device-status/device-status.component';
+
 
 
 const routes: Routes = [
   {path: 'chart', loadChildren: () => import(`./feature/chart/chart.module`).then(m => m.ChartModule)},
-  {path: 'default',component: DefaultChildComponent},
-  {path: '', redirectTo : '/chart', pathMatch: 'full'}
+  {path: 'device', loadChildren: () => import(`./feature/device-status/device-status.module`).then(m => m.DeviceStatusModule)},
+  {path: '', redirectTo : '/device', pathMatch: 'full'}
 ];
 
 
