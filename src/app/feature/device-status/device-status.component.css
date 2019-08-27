@@ -11,3 +11,7 @@ table {
   color:white;
   font-weight: bold;
 }
+
+.launchModal {
+  cursor: pointer;
+}

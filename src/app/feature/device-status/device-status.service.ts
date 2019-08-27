@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IDeviceStatus } from './dataInterface';
+import { IDeviceStatus, IRepostory } from './dataInterface';
 
 
 @Injectable()
@@ -20,13 +20,24 @@ export class DeviceStatusService {
     {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne', danger: 'notDanger'},
   ];
 
+  repository: IRepostory [] = [
+    {name: 'Person 1', id : 1},
+    {name: 'Person 2', id : 2},
+    {name: 'Person 3', id : 3},
+    {name: 'Person 4', id : 4}
+  ];
+
   deviceList() {
     return new Promise((resolve) => {
           resolve(this.ELEMENT_DATA);
     });
   }
 
-  deviceTableColumnName(){
+  deviceTableColumnName() {
     return  ['position', 'name', 'weight', 'symbol'];
+  }
+
+  Respository() {
+    return this.repository;
   }
 }

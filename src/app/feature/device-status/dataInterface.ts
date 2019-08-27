@@ -5,3 +5,9 @@ export class IDeviceStatus {
   symbol: string;
   danger: string;
 }
+
+
+export class IRepostory {
+  name: string;
+  id: number;
+}

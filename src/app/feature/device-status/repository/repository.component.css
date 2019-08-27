@@ -1,0 +1,11 @@
+.mat-custom-button {
+  height: 33px;
+  width: 68px;
+}
+mat-dialog-actions {
+  justify-content: flex-end;
+}
+
+h4 {
+  margin-bottom: 25px;
+}

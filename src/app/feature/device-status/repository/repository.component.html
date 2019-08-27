@@ -1,0 +1,14 @@
+<h4>{{description}}</h4>
+<mat-dialog-content [formGroup]="form">
+    <mat-form-field>
+        <mat-select formControlName="repository" placeholder="Repository">
+            <ng-container *ngFor="let repo of repositoryOptions">
+              <mat-option [value]="repo.id">{{ repo.name }}</mat-option>
+            </ng-container>
+         </mat-select>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="mat-raised-button mat-custom-button" mat-dialog-close >Close</button>
+    <button  class="mat-primary mat-raised-button mat-custom-button" (click)="save()" [disabled]="form.invalid">Save</button>
+</mat-dialog-actions>
